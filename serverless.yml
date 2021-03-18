@@ -1,0 +1,17 @@
+
+service: api-express
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  profile: api-express
+  lambdaHashingVersion: 20201221
+  region: sa-east-1
+
+
+functions:
+  hello:
+    handler: handler.hello

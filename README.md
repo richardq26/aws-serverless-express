@@ -1,0 +1,1 @@
+npm i aws-serverless-express express body-parser cors
