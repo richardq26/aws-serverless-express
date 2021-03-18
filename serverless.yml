@@ -13,5 +13,19 @@ provider:
 
 
 functions:
-  hello:
-    handler: handler.hello
+  app-api:
+    # Este handler por el module.handler de handler.js handler.funcion
+    handler: handler.handler
+    events:
+      - http:
+            path: /
+            method: GET
+            cors: true
+      - http:
+            path: /{proxy+}
+            method: any
+            cors: true
+      - http:
+            path: /post
+            method: POST
+            cors: true

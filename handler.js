@@ -21,6 +21,6 @@ const app = require('./src/index.js');
 
 const server = awsServerlessExpress.createServer(app);
 
-module.handler=(event, context) =>{
+exports.handler=(event, context) =>{
   return awsServerlessExpress.proxy(server,event,context);
 }
